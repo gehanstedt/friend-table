@@ -1,0 +1,12 @@
+.clickable {
+  text-decoration: underline;     
+  text-decoration-color: black;
+  color: blue;
+}
+
+.clickable:hover {
+  color: purple;
+  text-decoration: underline;     
+  text-decoration-color: purple;
+  cursor: pointer; 
+}
