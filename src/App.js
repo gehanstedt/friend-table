@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import FriendCard from "./components/TableRow";
 import BuildTable from "./components/BuildTable";
 import FriendRow from "./components/Title";
+import FilterAndUsage from "./components/FilterAndUsage";
 import friends from "./friends-new.json";
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
     friends,
     friendsOrig: [],
     sortBy: "id",
-    sortAscending: true
+    sortAscending: true,
+    filter: ""
   };
 
   handleSortBy = (id) => {
@@ -19,20 +21,17 @@ class App extends Component {
     var sortAscending;
     if (this.state.sortBy !== id) {
       // The current sort does not equal new sort.  Clobber sortOrder
-      console.log (`First case`);
       sortAscending = true;
     }
 
     else if (this.state.sortAscending === true) {
       // User clicked same sort.  Since it was ascending, make it descending (setting sortAscenting to false)
-      sortAscending = false
       console.log (`Second case`);
     }
 
     else {
       // sortAscending needs to be true
       sortAscending = true;
-      console.log (`Third case`);
     }
 
     this.setState (
@@ -51,8 +50,10 @@ class App extends Component {
     const sortBy = this.state.sortBy;
     const sortAscending = this.state.sortAscending;
 
-    var friends = this.state.friendsDuplicate;
+    var friends2 = this.state.friendsDuplicate;
+    var friends = friends2.filter (aFriend => aFriend.searchable.indexOf(this.state.filter) !== -1);
 
+    // Handle sorting.  Based on sortBy and sortOrder, sort by either ascending or descending
     friends.sort((a, b) => {
       let fa;
       let fb;
@@ -176,11 +177,25 @@ class App extends Component {
     )
   }
 
+  handleFilterChange = event => {
+    this.setState (
+      {
+        filter: event.target.value
+      },
+      () => {
+        this.sortAndFilterFriends ();
+      }
+    )
+  }
+
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <main>
         <Header />
+        <FilterAndUsage 
+          handleFilterChange={this.handleFilterChange}
+        />
         <BuildTable
           handleSortBy={this.handleSortBy}
           friends={this.state.friends}
