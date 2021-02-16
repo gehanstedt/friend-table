@@ -18,7 +18,7 @@ function FilterAndUsage(props) {
             sort by ID, First Name, Last Name, Gender, City and Country.  Click once for
             ascending sort.  Click a second time for descending sort.  Lastly, you can filter 
             against the same items you can sort with the field.  Whatever you type, only cells
-            matching those exactly will be displayed.
+            matching those exactly will be displayed (ignoring case).
           </td>
           <td style={styling}>
             <input

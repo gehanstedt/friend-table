@@ -27,6 +27,7 @@ class App extends Component {
     else if (this.state.sortAscending === true) {
       // User clicked same sort.  Since it was ascending, make it descending (setting sortAscenting to false)
       console.log (`Second case`);
+      sortAscending = false;
     }
 
     else {
@@ -51,7 +52,7 @@ class App extends Component {
     const sortAscending = this.state.sortAscending;
 
     var friends2 = this.state.friendsDuplicate;
-    var friends = friends2.filter (aFriend => aFriend.searchable.indexOf(this.state.filter) !== -1);
+    var friends = friends2.filter (aFriend => aFriend.searchable.toLowerCase().indexOf(this.state.filter.toLowerCase()) !== -1);
 
     // Handle sorting.  Based on sortBy and sortOrder, sort by either ascending or descending
     friends.sort((a, b) => {
