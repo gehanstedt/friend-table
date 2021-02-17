@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Friend Table <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+    
+## Table of Contents
+* [Description](#description)
+* [Repository](#repository)
+* [Content-URL](#content-url)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Testing](#testing)
+* [Questions](#questions)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+Friend Table is a demonstration of some features of React.  Using an internal database (currently not changeable), Friend Table allows you to sort and filter on First Name, Last Name, Gender, City and Country.  It also allows sorting by ID.  To sort, simply click the colum you wish to sort.  The first click sorts in ascending order.  The second click sorts in descending order.  Leveraging an aggregated filter field, filtering happens immediately with any charactes you type into the "Filter text" input.  This is homework 19 from the Georgia Tech Coding Bootcamp.
 
-## Available Scripts
+## Repository
+https://github.com/gehanstedt/friend-table
 
-In the project directory, you can run:
+## Content-URL
+https://gehanstedt.github.io/friend-table/
 
-### `npm start`
+## Installation
+Optionally fork, and clone the repo to your system.  Ensure Node.js and NPM are installed.  Once cloned, run "npm install" to install all dependendent packages.   
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Usage
+Run `npm start` in the applications main directory.  This will start the application on port 3000 (can be changed in code).  By default, your system should launch a browser but you can also access via http://localhost:3000 or http://(server-ip-address):3000 on your network.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## License
+<img src="https://img.shields.io/badge/License-MIT-yellow.svg"> MIT License
 
-### `npm test`
+https://opensource.org/licenses/MIT
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
+Contact me below.
 
-### `npm run build`
+## Testing
+Friend Table has been tested with Node.js v14.15.4 and NPM 7.5.2, but will likely work with major versions around those.  It was tested in Chrome.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Questions
+GitHub Portal:  https://github.com/gehanstedt
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Email:  spamgreghere@gmail.com
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Generated by readme-generator.js - Copyright ©2020 G Dog Enterprises
+      

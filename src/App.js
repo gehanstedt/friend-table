@@ -16,6 +16,7 @@ class App extends Component {
     filter: ""
   };
 
+  // This is called when a user clicks one of the headings to sort a column in the table
   handleSortBy = (id) => {
     console.log (`In handleSortBy,  ID is ${id}`);
     var sortAscending;
@@ -26,7 +27,6 @@ class App extends Component {
 
     else if (this.state.sortAscending === true) {
       // User clicked same sort.  Since it was ascending, make it descending (setting sortAscenting to false)
-      console.log (`Second case`);
       sortAscending = false;
     }
 
@@ -35,6 +35,8 @@ class App extends Component {
       sortAscending = true;
     }
 
+    // Save sortAscending and sortBy states, then run sortAndFilterFriends to refresh the friends object
+    // with updates sort
     this.setState (
       {
         sortAscending: sortAscending,
@@ -47,6 +49,8 @@ class App extends Component {
     );
   };
 
+  // This is called to regenerate the friends object based on the current filter and current sort
+  // stored in state
   sortAndFilterFriends () {
     const sortBy = this.state.sortBy;
     const sortAscending = this.state.sortAscending;
@@ -60,6 +64,8 @@ class App extends Component {
       let fb;
 
       switch (sortBy) {
+        // User sorted by ID.  Since this is numeric we'll copy the IDs and not
+        // worry about the toLowerCase function
         case "id":
           if (sortAscending) {
             fa = a.id;
@@ -72,7 +78,8 @@ class App extends Component {
           }
           
           break;
-
+        
+        // User chose to sort by 
         case "firstName":
           if (sortAscending) {
             fa = a.first_name.toLowerCase();
